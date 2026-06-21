@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷速 · 稳定入口说明</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f7f7f9;
+      color: #1d1d1f;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1.25rem;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+    }
+    /* 标题层级清晰 */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+      color: #111;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+      color: #222;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      color: #3a3a3c;
+    }
+    /* 卡片区域：轻阴影、低边界 */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.75rem 0 1rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.6rem 1.5rem 1.4rem;
+      flex: 1 1 200px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #1a1a1e;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #4a4a4d;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+    /* 链接内敛，不下划线，hover突出 */
+    a {
+      color: #1357a0;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+      font-weight: 450;
+    }
+    a:hover {
+      border-bottom-color: #1357a0;
+      color: #0a3d75;
+    }
+    /* 分割线 */
+    hr {
+      border: 0;
+      border-top: 1px solid #e2e2e6;
+      margin: 2.5rem 0 1.8rem;
+    }
+    /* 提示块 */
+    .note {
+      background: #f0f2f5;
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      color: #2c2c2e;
+      line-height: 1.5;
+    }
+    .note strong {
+      color: #1c1c1e;
+      font-weight: 500;
+    }
+    /* FAQ摘要用紧凑列表 */
+    .faq-list {
+      list-style: none;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .faq-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eaeaee;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .faq-list li:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 500;
+      min-width: 6rem;
+      color: #2a2a2c;
+    }
+    .faq-a {
+      color: #4a4a4d;
+    }
+    /* 响应式微调 */
+    @media (max-width: 500px) {
+      body { padding: 2.5rem 1rem; }
+      h1 { font-size: 2rem; }
+      .card-grid { flex-direction: column; }
+      .faq-list li { flex-wrap: wrap; }
+      .faq-q { min-width: 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>雷速 · 稳定入口与产品说明</h1>
+
+    <p>在信息纷杂的赛况环境中，一个习惯性的、稳定的访问起点往往比频繁切换的工具更可靠。<strong>雷速</strong>所提供的页面结构始终围绕赛事数据、比分资讯与实时动态展开，本次介绍从入口清晰度与页面使用逻辑出发，帮助新用户快速理解其定位。</p>
+
+    <!-- 摘要 + 亮点卡片  -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>摘要</h3>
+        <p>以赛事数据为核心的内容聚合，界面以信息密度优先，减少装饰性元素，适配快速查阅场景。</p>
+      </div>
+      <div class="card">
+        <h3>亮点</h3>
+        <p>比分列表与赛程结构采用分层展示；竞足、篮球等分类入口位置统一，切换成本低。</p>
+      </div>
+      <div class="card">
+        <h3>使用建议</h3>
+        <p>可将其设为移动端常用标签页；关注页内「实时」区域，更新延迟处于合理范围内。</p>
+      </div>
+    </div>
+
+    <!-- 使用场景 -->
+    <h2>适用场景</h2>
+    <p>适合需要快速浏览当日赛事、关注重点场次比分的用户。在通勤、赛前准备或同时追踪多场时，通过 <a href="https://wap--leisu.com">雷速</a> 的列表式布局可以一目了然地获取比分变化、比赛阶段等关键信息，无需逐一点击。页面结构以文字信息为主体，加载速度在主流浏览器上表现稳定。</p>
+
+    <!-- 提示（非诱导，侧重说明） -->
+    <div class="note">
+      <strong>可信提示</strong> · 本页面为独立介绍说明，与 <a href="https://wap--leisu.com" style="border-bottom: 1px solid #1357a0;">雷速</a> 站点的内容保持同步关系。首次使用建议熟悉顶部导航的分类逻辑，数据更新依赖网络环境与赛事源，偶有延迟属正常情况。无夸大宣传，无会员引导，仅为功能性介绍。
+    </div>
+
+    <!-- FAQ摘要  -->
+    <h2>FAQ 摘要</h2>
+    <ul class="faq-list">
+      <li><span class="faq-q">页面结构？</span><span class="faq-a">顶部为赛事分类，中部为滚动比分，底部为赛程/赛果切换。</span></li>
+      <li><span class="faq-q">数据刷新？</span><span class="faq-a">页面自动轮询部分接口，手动下拉可触发即时刷新。</span></li>
+      <li><span class="faq-q">是否适配手机？</span><span class="faq-a">站点本身采用窄版设计，在移动浏览器中可直接阅读，无需缩放。</span></li>
+      <li><span class="faq-q">常见问题？</span><span class="faq-a">如遇白屏可尝试清除缓存或使用系统默认浏览器。</span></li>
+    </ul>
+
+    <hr>
+
+    <!-- 结尾自然嵌入链接，再次出现“雷速” -->
+    <p style="font-size: 0.95rem; color: #555;">如果你希望从固定入口获取赛事动态，可以将 <a href="https://wap--leisu.com">雷速</a> 加入书签。本说明仅用于展示其页面特点与使用方式，不构成任何推荐或保证。</p>
+    <p style="font-size: 0.9rem; color: #888; margin-top: 2rem;">© 页面介绍 · 信息呈现方向：稳定入口说明</p>
+  </div>
+</body>
+</html>
